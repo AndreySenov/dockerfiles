@@ -6,10 +6,13 @@ services:
 .base:
   script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - docker build . --no-cache --pull -f ./firebase-tools -t $DOCKER_USER/$CI_JOB_NAME
+    - docker build . --no-cache --pull -f ./$CI_JOB_NAME -t $DOCKER_USER/$CI_JOB_NAME
     - docker push $DOCKER_USER/$CI_JOB_NAME
   only:
     - master
+
+bs-platform:
+  extends: .base
 
 firebase-tools:
   extends: .base
