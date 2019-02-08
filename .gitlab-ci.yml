@@ -11,8 +11,8 @@ services:
   only:
     - master
 
-bs-platform:
-  extends: .base
+#bs-platform:
+#  extends: .base
 
 firebase-tools:
   extends: .base
