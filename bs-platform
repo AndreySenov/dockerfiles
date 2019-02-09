@@ -1,3 +1,12 @@
 FROM node:lts-alpine
-RUN yarn global add bs-platform && \
-    yarn cache clean
+RUN apk add g++ make python && \
+    yarn global add bs-platform
+
+FROM node:lts-alpine
+COPY --from=0 /usr/local/share/.config/yarn/global /usr/local/share/.config/yarn/global
+RUN cd /usr/local && \
+    ln -s ../share/.config/yarn/global/node_modules/.bin/bsb bin/bsb && \
+    ln -s ../share/.config/yarn/global/node_modules/.bin/bsc bin/bsc && \
+    ln -s ../share/.config/yarn/global/node_modules/.bin/bsrefmt bin/bsrefmt && \
+    bsb -v && \
+    bsc -v
