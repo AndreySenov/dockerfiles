@@ -4,9 +4,16 @@ RUN apk add g++ make python && \
 
 FROM node:lts-alpine
 COPY --from=0 /usr/local/share/.config/yarn/global /usr/local/share/.config/yarn/global
+ENV HOME=/home/node
 RUN cd /usr/local && \
     ln -s ../share/.config/yarn/global/node_modules/.bin/bsb bin/bsb && \
     ln -s ../share/.config/yarn/global/node_modules/.bin/bsc bin/bsc && \
     ln -s ../share/.config/yarn/global/node_modules/.bin/bsrefmt bin/bsrefmt && \
     bsb -v && \
-    bsc -v
+    bsc -v && \
+    mkdir $HOME/.cache && \
+    chown -R node:node $HOME
+USER node
+VOLUME $HOME/.cache
+WORKDIR $HOME
+CMD ["sh"]
