@@ -18,11 +18,11 @@ bs-platform-4.0.18:
   script:
     - export NAME=bs-platform
     - export VERSION=4.0.18
-    - docker build $NAME --no-cache --pull \
-      -f $NAME/Dockerfile \
-      -t $DOCKER_USER/$NAME:$VERSION \
-      -t $DOCKER_USER/$NAME:latest \
-      --build-arg VERSION=$VERSION \
+    - docker build $NAME --no-cache --pull
+      -f $NAME/Dockerfile
+      -t $DOCKER_USER/$NAME:$VERSION
+      -t $DOCKER_USER/$NAME:latest
+      --build-arg VERSION=$VERSION
       --build-arg VCS_REF=$CI_COMMIT_SHA
   after_script:
     - export NAME=bs-platform
@@ -35,11 +35,11 @@ firebase-tools-6.3.1:
   script:
     - export NAME=firebase-tools
     - export VERSION=6.3.1
-    - docker build $NAME --no-cache --pull \
-      -f $NAME/Dockerfile \
-      -t $DOCKER_USER/$NAME:$VERSION \
-      -t $DOCKER_USER/$NAME:latest \
-      --build-arg VERSION=$VERSION \
+    - docker build $NAME --no-cache --pull
+      -f $NAME/Dockerfile
+      -t $DOCKER_USER/$NAME:$VERSION
+      -t $DOCKER_USER/$NAME:latest
+      --build-arg VERSION=$VERSION
       --build-arg VCS_REF=$CI_COMMIT_SHA
   after_script:
     - export NAME=firebase-tools
