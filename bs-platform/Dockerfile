@@ -1,9 +1,20 @@
 FROM node:lts-alpine
+ARG VERSION
 RUN apk add g++ make python && \
-    yarn global add bs-platform
+    yarn global add bs-platform@$VERSION
 
 FROM node:lts-alpine
+ARG VERSION
+ARG VCS_REF
+LABEL org.label-schema.schema-version = "1.0" \
+      org.label-schema.name = "bs-platform" \
+      org.label-schema.version = $VERSION \
+      org.label-schema.description = "BuckleScript and Reason on the NodeJS LTS image" \
+      org.label-schema.url = "https://reasonml.github.io/" \
+      org.label-schema.vcs-url = "https://github.com/AndreySenov/dockerfiles/" \
+      org.label-schema.vcs-ref = $VCS_REF
 COPY --from=0 /usr/local/share/.config/yarn/global /usr/local/share/.config/yarn/global
+ENV BS_PLATFORM_VERSION=$VERSION
 ENV HOME=/home/node
 RUN cd /usr/local && \
     ln -s ../share/.config/yarn/global/node_modules/.bin/bsb bin/bsb && \
