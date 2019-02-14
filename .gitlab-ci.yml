@@ -5,6 +5,8 @@ services:
 
 .base:
   before_script:
+    - export BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+    - echo $BUILD_DATE
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   only:
     - master
