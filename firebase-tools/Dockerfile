@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM node:boron-alpine
 ARG VERSION
 ARG VCS_REF
 LABEL org.label-schema.schema-version = "1.0" \
