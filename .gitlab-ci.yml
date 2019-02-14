@@ -6,10 +6,6 @@ services:
 .base:
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-  script:
-    - docker build $CI_JOB_NAME --no-cache --pull -f $CI_JOB_NAME/Dockerfile -t $DOCKER_USER/$CI_JOB_NAME
-  after_script:
-    - docker push $DOCKER_USER/$CI_JOB_NAME
   only:
     - master
 
