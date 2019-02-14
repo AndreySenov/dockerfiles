@@ -11,9 +11,10 @@ services:
 
 bs-platform-4.0.18:
   extends: .base
+  variables:
+    NAME: "bs-platform"
+    VERSION: "4.0.18"
   script:
-    - export NAME=bs-platform
-    - export VERSION=4.0.18
     - docker build $NAME --no-cache --pull
       -f $NAME/Dockerfile
       -t $DOCKER_USER/$NAME:$VERSION
@@ -21,16 +22,15 @@ bs-platform-4.0.18:
       --build-arg VERSION=$VERSION
       --build-arg VCS_REF=$CI_COMMIT_SHA
   after_script:
-    - export NAME=bs-platform
-    - export VERSION=4.0.18
     - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
 
 firebase-tools-6.3.1:
   extends: .base
+  variables:
+    NAME: firebase-tools
+    VERSION: "6.3.1"
   script:
-    - export NAME=firebase-tools
-    - export VERSION=6.3.1
     - docker build $NAME --no-cache --pull
       -f $NAME/Dockerfile
       -t $DOCKER_USER/$NAME:$VERSION
@@ -38,7 +38,5 @@ firebase-tools-6.3.1:
       --build-arg VERSION=$VERSION
       --build-arg VCS_REF=$CI_COMMIT_SHA
   after_script:
-    - export NAME=firebase-tools
-    - export VERSION=6.3.1
     - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
