@@ -4,7 +4,7 @@ ARG VCS_REF
 LABEL org.label-schema.schema-version = "1.0" \
       org.label-schema.name = "firebase-tools" \
       org.label-schema.version = ${VERSION} \
-      org.label-schema.description = "Firebase CLI on the NodeJS LTS image" \
+      org.label-schema.description = "Firebase CLI on the NodeJS image" \
       org.label-schema.url = "https://github.com/firebase/firebase-tools/" \
       org.label-schema.vcs-url = "https://github.com/AndreySenov/dockerfiles/" \
       org.label-schema.vcs-ref = ${VCS_REF}

@@ -1,6 +1,6 @@
 # firebase-tools
 
-Firebase CLI installed globally over the official NodeJS LTS image
+Firebase CLI installed globally over the official NodeJS image
 
 ```
 THIS DOCKER IMAGE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
