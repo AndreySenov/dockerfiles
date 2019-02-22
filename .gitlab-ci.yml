@@ -57,5 +57,3 @@ firebase-tools-6.3.1:
       --build-arg BUILD_DATE="${BUILD_DATE}"
       --build-arg VCS_REF=$CI_COMMIT_SHA
       --build-arg VERSION=$VERSION
-  after_script:
-    - docker push $DOCKER_USER/$NAME:$VERSION
