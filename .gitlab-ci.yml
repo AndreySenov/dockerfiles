@@ -33,6 +33,7 @@ firebase-tools-6.4.0:
     NAME: firebase-tools
     VERSION: "6.4.0"
   script:
+    - echo $BUILD_DATE
     - docker build $NAME --no-cache --pull
       -f $NAME/Dockerfile
       -t $DOCKER_USER/$NAME:$VERSION
