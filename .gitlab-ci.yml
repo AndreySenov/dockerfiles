@@ -27,11 +27,11 @@ bs-platform-4.0.18:
     - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
 
-firebase-tools-6.3.1:
+firebase-tools-6.4.0:
   extends: .base
   variables:
     NAME: firebase-tools
-    VERSION: "6.3.1"
+    VERSION: "6.4.0"
   script:
     - docker build $NAME --no-cache --pull
       -f $NAME/Dockerfile
@@ -43,3 +43,18 @@ firebase-tools-6.3.1:
   after_script:
     - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
+
+firebase-tools-6.3.1:
+  extends: .base
+  variables:
+    NAME: firebase-tools
+    VERSION: "6.3.1"
+  script:
+    - docker build $NAME --no-cache --pull
+      -f $NAME/Dockerfile
+      -t $DOCKER_USER/$NAME:$VERSION
+      --build-arg BUILD_DATE="${BUILD_DATE}"
+      --build-arg VCS_REF=$CI_COMMIT_SHA
+      --build-arg VERSION=$VERSION
+  after_script:
+    - docker push $DOCKER_USER/$NAME:$VERSION
