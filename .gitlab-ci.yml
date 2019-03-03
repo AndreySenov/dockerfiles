@@ -5,7 +5,6 @@ services:
 
 .base:
   before_script:
-    - export BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   only:
     - master
@@ -20,7 +19,7 @@ bs-platform-4.0.18:
       -f $NAME/Dockerfile
       -t $DOCKER_USER/$NAME:$VERSION
       -t $DOCKER_USER/$NAME:latest
-      --build-arg BUILD_DATE="${BUILD_DATE}"
+      --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
       --build-arg VCS_REF=$CI_COMMIT_SHA
       --build-arg VERSION=$VERSION
   after_script:
@@ -33,12 +32,11 @@ firebase-tools-6.4.0:
     NAME: firebase-tools
     VERSION: "6.4.0"
   script:
-    - echo $BUILD_DATE
     - docker build $NAME --no-cache --pull
       -f $NAME/Dockerfile
       -t $DOCKER_USER/$NAME:$VERSION
       -t $DOCKER_USER/$NAME:latest
-      --build-arg BUILD_DATE="${BUILD_DATE}"
+      --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
       --build-arg VCS_REF=$CI_COMMIT_SHA
       --build-arg VERSION=$VERSION
   after_script:
