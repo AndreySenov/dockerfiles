@@ -2,6 +2,9 @@
 
 BuckleScript and Reason installed globally over the official NodeJS LTS image
 
+[![](https://images.microbadger.com/badges/version/andreysenov/bs-platform.svg)](https://microbadger.com/images/andreysenov/bs-platform)
+[![](https://images.microbadger.com/badges/image/andreysenov/bs-platform.svg)](https://microbadger.com/images/andreysenov/bs-platform)
+
 ```
 THIS DOCKER IMAGE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
