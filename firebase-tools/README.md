@@ -1,6 +1,6 @@
 # firebase-tools
 
-Firebase CLI installed globally over the official NodeJS image
+[Firebase CLI](https://www.npmjs.com/package/firebase-tools) installed globally over the official NodeJS image
 
 [url]: https://microbadger.com/images/andreysenov/firebase-tools
 [![](https://images.microbadger.com/badges/version/andreysenov/firebase-tools.svg)][url]
