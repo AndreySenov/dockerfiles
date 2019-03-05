@@ -2,8 +2,10 @@
 
 Firebase CLI installed globally over the official NodeJS image
 
-[![](https://images.microbadger.com/badges/version/andreysenov/firebase-tools.svg)](https://microbadger.com/images/andreysenov/firebase-tools)
-[![](https://images.microbadger.com/badges/image/andreysenov/firebase-tools.svg)](https://microbadger.com/images/andreysenov/firebase-tools)
+[url]: https://microbadger.com/images/andreysenov/firebase-tools
+[![](https://images.microbadger.com/badges/version/andreysenov/firebase-tools.svg)][url]
+[![](https://images.microbadger.com/badges/image/andreysenov/firebase-tools.svg)][url]
+[![](https://images.microbadger.com/badges/commit/andreysenov/firebase-tools.svg)][url]
 
 ```
 THIS DOCKER IMAGE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
