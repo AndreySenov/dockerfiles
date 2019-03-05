@@ -1,6 +1,6 @@
 # bs-platform
 
-[BuckleScript and Reason](https://www.npmjs.com/package/bs-platform) installed globally over the official NodeJS LTS image
+[BuckleScript and Reason](https://www.npmjs.com/package/bs-platform) installed globally over the official [NodeJS LTS image](https://hub.docker.com/_/node)
 
 [url]: https://microbadger.com/images/andreysenov/bs-platform
 [![](https://images.microbadger.com/badges/version/andreysenov/bs-platform.svg)][url]
