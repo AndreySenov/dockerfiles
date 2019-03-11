@@ -6,6 +6,10 @@ services:
 .base:
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+  after_script:
+    - docker push $DOCKER_USER/$NAME:$VERSION
+    - docker push $DOCKER_USER/$NAME:$VERSION-alpine
+    - docker push $DOCKER_USER/$NAME:latest
   only:
     - master
 
@@ -23,9 +27,6 @@ bs-platform:
       --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
       --build-arg VCS_REF=$CI_COMMIT_SHA
       --build-arg VERSION=$VERSION
-  after_script:
-    - docker push $DOCKER_USER/$NAME:$VERSION
-    - docker push $DOCKER_USER/$NAME:latest
 
 firebase-tools:
   extends: .base
@@ -41,6 +42,3 @@ firebase-tools:
       --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
       --build-arg VCS_REF=$CI_COMMIT_SHA
       --build-arg VERSION=$VERSION
-  after_script:
-    - docker push $DOCKER_USER/$NAME:$VERSION
-    - docker push $DOCKER_USER/$NAME:latest
