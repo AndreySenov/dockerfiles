@@ -4,11 +4,10 @@ services:
   - docker:stable-dind
 
 .base:
-  before_script:
-    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   after_script:
-    - docker push $DOCKER_USER/$NAME:$VERSION
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - docker push $DOCKER_USER/$NAME:$VERSION-alpine
+    - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
   only:
     - master
