@@ -5,6 +5,8 @@ RUN apk add g++ make python && \
 
 FROM node:lts-alpine
 ARG BUILD_DATE
+ARG CI_JOB_ID
+ARG CI_PIPELINE_ID
 ARG VERSION
 ARG VCS_REF
 LABEL org.label-schema.schema-version="1.0" \
@@ -14,7 +16,9 @@ LABEL org.label-schema.schema-version="1.0" \
       org.label-schema.description="BuckleScript and Reason on the NodeJS LTS image" \
       org.label-schema.url="https://github.com/bucklescript/bucklescript/" \
       org.label-schema.vcs-url="https://github.com/AndreySenov/dockerfiles/" \
-      org.label-schema.vcs-ref=${VCS_REF}
+      org.label-schema.vcs-ref=${VCS_REF} \
+      ci_job_id=${CI_JOB_ID} \
+      ci_pipeline_id=${CI_PIPELINE_ID}
 COPY --from=0 /usr/local/share/.config/yarn/global /usr/local/share/.config/yarn/global
 ENV BS_PLATFORM_VERSION=${VERSION}
 ENV HOME=/home/node
