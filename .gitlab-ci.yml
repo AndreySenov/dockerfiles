@@ -9,7 +9,7 @@ services:
   only:
     - master
 
-bs-platform-4.0.18:
+bs-platform:
   extends: .base
   variables:
     NAME: "bs-platform"
@@ -27,7 +27,7 @@ bs-platform-4.0.18:
     - docker push $DOCKER_USER/$NAME:$VERSION
     - docker push $DOCKER_USER/$NAME:latest
 
-firebase-tools-6.4.0:
+firebase-tools:
   extends: .base
   variables:
     NAME: firebase-tools
