@@ -15,3 +15,9 @@ IN NO EVENT SHALL THE MAINTAINERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIAB
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN THE DOCKER IMAGE.
 ```
+
+## Supported tags
+
+* [latest, 6.5.0, 6.5.0-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
+* 6.4.0, 6.4.0-alpine
+* 6.3.1, 6.3.1-alpine
