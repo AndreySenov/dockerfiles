@@ -21,3 +21,14 @@ OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN TH
 * [latest, 6.5.0, 6.5.0-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
 * 6.4.0, 6.4.0-alpine
 * 6.3.1, 6.3.1-alpine
+
+## Quick reference
+
+* Where to get help:<br>
+[the chat on Gitter](https://gitter.im/_dockerfiles/community)
+
+* Where to file issues:<br>
+[the Issues page on Github](https://github.com/AndreySenov/dockerfiles/issues)
+
+* Where to see the image metadata:<br>
+[the page on Microbadger][url]

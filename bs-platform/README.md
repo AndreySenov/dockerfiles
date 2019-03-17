@@ -19,3 +19,14 @@ OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN TH
 ## Supported tags
 
 * [latest, 4.0.18, 4.0.18-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/bs-platform/Dockerfile)
+
+## Quick reference
+
+* Where to get help:<br>
+[the chat on Gitter](https://gitter.im/_dockerfiles/community)
+
+* Where to file issues:<br>
+[the Issues page on Github](https://github.com/AndreySenov/dockerfiles/issues)
+
+* Where to see the image metadata:<br>
+[the page on Microbadger][url]
