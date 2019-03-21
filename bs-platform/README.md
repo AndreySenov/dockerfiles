@@ -21,7 +21,8 @@ OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN TH
 
 ## Supported tags
 
-* [latest, 4.0.18, 4.0.18-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/bs-platform/Dockerfile)
+* [latest, 5.0.0, 5.0.0-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/bs-platform/Dockerfile)
+* 4.0.18, 4.0.18-alpine
 
 ## Quick reference
 
