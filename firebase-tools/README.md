@@ -21,7 +21,8 @@ OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN TH
 
 ## Supported tags
 
-* [latest, 6.5.0, 6.5.0-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
+* [latest, 6.5.1, 6.5.1-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
+* 6.5.0, 6.5.0-alpine
 * 6.4.0, 6.4.0-alpine
 * 6.3.1, 6.3.1-alpine
 

@@ -31,4 +31,4 @@ bs-platform:
 firebase-tools:
   extends: .base
   variables:
-    VERSION: "6.5.0"
+    VERSION: "6.5.1"
