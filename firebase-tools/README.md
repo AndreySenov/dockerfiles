@@ -19,15 +19,6 @@ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN THE DOCKER IMAGE.
 ```
 
-## Supported tags
-
-* [latest, 6.5.3, 6.5.3-alpine](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
-* 6.5.2, 6.5.2-alpine
-* 6.5.1, 6.5.1-alpine
-* 6.5.0, 6.5.0-alpine
-* 6.4.0, 6.4.0-alpine
-* 6.3.1, 6.3.1-alpine
-
 ## Quick reference
 
 * Where to get help:<br>
@@ -35,6 +26,9 @@ OUT OF OR IN CONNECTION WITH THE DOCKER IMAGE OR THE USE OR OTHER DEALINGS IN TH
 
 * Where to file issues:<br>
 [the Issues page on Github](https://github.com/AndreySenov/dockerfiles/issues)
+
+* Where to see the Dockerfile:<br>
+[Dockerfile](https://github.com/AndreySenov/dockerfiles/blob/master/firebase-tools/Dockerfile)
 
 * Where to see the image metadata:<br>
 [the page on Microbadger][url]
