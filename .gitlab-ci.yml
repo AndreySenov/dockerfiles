@@ -26,7 +26,7 @@ services:
 bs-platform:
   extends: .base
   variables:
-    VERSION: "5.0.1"
+    VERSION: "5.0.2"
 
 firebase-tools:
   extends: .base
