@@ -1,4 +1,4 @@
-FROM node:boron-alpine
+FROM node:lts-alpine
 ARG BUILD_DATE
 ARG CI_JOB_ID
 ARG CI_PIPELINE_ID
